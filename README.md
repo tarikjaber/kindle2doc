@@ -2,6 +2,7 @@
 Converts kindle highlights into org, markdown, or text files.
 
 ## Usage
+```
 Usage: kindle2org [OPTIONS]
 
 Options:
@@ -15,3 +16,4 @@ Options:
           Print help
   -V, --version
           Print version
+```
