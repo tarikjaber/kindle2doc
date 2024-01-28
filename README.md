@@ -19,3 +19,19 @@ Options:
   -V, --version
           Print version
 ```
+
+## Installation
+Clone the repo
+```bash
+https://github.com/tarikjaber/kindle2doc.git
+```
+
+Build the program
+```bash
+cargo build --release
+```
+
+Move the executable to a folder in `$PATH`
+```bash
+mv target/release/kindle2org ~/bin/kindle2org
+```
