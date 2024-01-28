@@ -2,8 +2,6 @@
 Converts kindle highlights into org, markdown, or text files.
 
 ## Usage
-Provide the path to `My Clippings.txt` in the command or set it in a file at `~/.config/kindle2doc/kindle_clippings_path`.
-
 ```
 Usage: kindle2org [OPTIONS]
 
@@ -18,6 +16,13 @@ Options:
           Print help
   -V, --version
           Print version
+```
+
+Provide the path to `My Clippings.txt` in the command or set it in a file at `~/.config/kindle2doc/kindle_clippings_path`.
+
+An example `kindle_clippings_path`:
+```
+/run/media/tarik/Kindle/documents/My Clippings.txt
 ```
 
 ## Installation
