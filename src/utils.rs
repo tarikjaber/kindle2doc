@@ -4,6 +4,7 @@ use std::fs;
 use std::io::Write;
 use std::env;
 
+/// Program to convert Kindle clippings to a text, markdown, or org file.
 #[derive(Parser, Debug)]
 #[command(author, version, about, long_about = None)]
 pub struct Args {
@@ -15,7 +16,7 @@ pub struct Args {
     #[arg(short, long, default_value = "org")]
     pub export_type: String,
 
-    /// Path to Kindle clippings file.
+    /// Path to Kindle clippings file. If not provided will look for a default path in ~/.config/kindle2doc/kindle_clippings_path.
     #[arg(short, long)]
     pub clippings_path: Option<String>,
 }
