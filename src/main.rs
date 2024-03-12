@@ -20,22 +20,20 @@ fn main() {
 
     let parts = contents.split("==========");
 
-    let mut highlights: HashMap<String, Vec<String>> = HashMap::new();
+    let mut highlights: HashMap<&str, Vec<&str>> = HashMap::new();
 
     for part in parts {
         let lines: Vec<&str> = part.lines().filter(|line| !line.is_empty()).collect();
 
         if lines.len() > 1 {
-            let title = utils::clean_title(lines[0].split(" (").collect::<Vec<&str>>()[0]);
+            let title = utils::clean_title(lines[0].split(" (").next().expect("There should be a title"));
             let highlight = lines.last().unwrap();
-            highlights.entry(title.to_string()).or_insert(Vec::new()).push(highlight.to_string());
+            highlights.entry(title).or_default().push(highlight);
         }
     }
 
-    fs::File::create("highlights.txt").expect("Unable to create file");
-
-    let mut titles: Vec<String> = highlights.keys().cloned().collect();
+    let mut titles: Vec<&str> = highlights.keys().cloned().collect();
     titles.sort();
 
-    utils::write_file(highlights, &args.output_file, &args.export_type);
+    utils::write_files(highlights, &args.export_type);
 }
