@@ -3,15 +3,19 @@ Converts kindle highlights into org, markdown, or text files.
 
 ## Usage
 ```
+Program to convert Kindle clippings to a text, markdown, or org file
+
 Usage: kindle2org [OPTIONS]
 
 Options:
-  -o, --output-file <OUTPUT_FILE>
-          Path to output file [default: highlights.org]
   -e, --export-type <EXPORT_TYPE>
           Export type. Options are 'org', 'md', and 'txt' [default: org]
+  -d, --directory <DIRECTORY>
+          Sets the output directory of the highlight files [default: .]
   -c, --clippings-path <CLIPPINGS_PATH>
-          Path to Kindle clippings file
+          Path to Kindle clippings file. If not provided will look for a default path in ~/.config/kindle2doc/kindle_clippings_path
+  -o, --one-file
+          Sets if the highlights are exported to one or many files
   -h, --help
           Print help
   -V, --version

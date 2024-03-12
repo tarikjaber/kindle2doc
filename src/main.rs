@@ -35,5 +35,9 @@ fn main() {
     let mut titles: Vec<&str> = highlights.keys().cloned().collect();
     titles.sort();
 
-    utils::write_files(highlights, &args.export_type);
+    if args.one_file {
+        utils::write_file(highlights, &args.directory, &args.export_type);
+    } else {
+        utils::write_files(highlights, &args.directory, &args.export_type);
+    }
 }
