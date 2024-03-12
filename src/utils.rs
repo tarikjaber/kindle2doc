@@ -20,7 +20,7 @@ pub struct Args {
     #[arg(short, long)]
     pub clippings_path: Option<String>,
 
-    /// Sets if the highlights are exported to one or many files.
+    /// Outputs all highlights into one file.
     #[arg(short, long)]
     pub one_file: bool,
 }

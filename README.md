@@ -15,7 +15,7 @@ Options:
   -c, --clippings-path <CLIPPINGS_PATH>
           Path to Kindle clippings file. If not provided will look for a default path in ~/.config/kindle2doc/kindle_clippings_path
   -o, --one-file
-          Sets if the highlights are exported to one or many files
+          Outputs all highlights into one file
   -h, --help
           Print help
   -V, --version
